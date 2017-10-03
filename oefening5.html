@@ -6,11 +6,26 @@
           var canvas = document.getElementById("canvas");
           var robotArm = new RobotArm(canvas);
 
-          robotArm.loadLevel("exercise 11");
-          
-        
+          robotArm.loadLevel("exercise 6");
+
           // Je eigen code plaats je hier.
-      
+              
+            for(v=0;v<8;v++){
+              robotArm.moveRight();
+            }
+            for(v=0;v<8;v++){
+              robotArm.moveLeft();
+              robotArm.grab();
+              robotArm.moveRight();
+              robotArm.drop();
+              robotArm.moveLeft();
+            }
+           
+
+
+
+
+
           // De door jou opgegeven instructies uitvoeren
             robotArm.run();
         </script>
